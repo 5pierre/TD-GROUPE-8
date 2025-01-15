@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./view/styles/stylevideo.css">
+
     <title>CatHub</title>
     <style>
         body {
@@ -125,7 +127,6 @@
         <input type="text" placeholder="Rechercher">
 
 
- 
         <button onclick="document.getElementById('popup').style.display='block'">+ Uploader</button>
         <div id="popup" style="display:none;">
             <form action="" method="post">
@@ -143,7 +144,7 @@
     </header>
 
     <main>
-        <div class="video-list">
+        <!-- <div class="video-list">
             <div class="video-item">
                 <img src="view/images/cat2.jpg" alt="Thumbnail">
                 <div class="video-details">
@@ -166,16 +167,7 @@
                 </div>
             </div>
 
-            <div class="video-item">
-                <img src="view/images/cat3.jpg" alt="Thumbnail">
-                <div class="video-details">
-                    <h3>🐱 Le secret de Mats</h3>
-                    <p>Fitness-Muscu • 1,8 M de vues • il y a 11 jours</p>
-                </div>
-                <div class="video-actions">
-                    <button>Supprimer</button>
-                </div>
-            </div>
+         
 
             <div class="video-item">
                 <img src="view/images/cat3.jpg" alt="Thumbnail">
@@ -187,51 +179,24 @@
                     <button>Supprimer</button>
                 </div>
             </div>
-
-            <div class="video-item">
-                <img src="view/images/cat3.jpg" alt="Thumbnail">
-                <div class="video-details">
-                    <h3>🐱 Le secret de Mats</h3>
-                    <p>Fitness-Muscu • 1,8 M de vues • il y a 11 jours</p>
-                </div>
-                <div class="video-actions">
-                    <button>Supprimer</button>
-                </div>
-            </div>
-
-            <div class="video-item">
-                <img src="view/images/cat3.jpg" alt="Thumbnail">
-                <div class="video-details">
-                    <h3>🐱 Le secret de Mats</h3>
-                    <p>Fitness-Muscu • 1,8 M de vues • il y a 11 jours</p>
-                </div>
-                <div class="video-actions">
-                    <button>Supprimer</button>
-                </div>
-            </div>
-            <div class="video-item">
-                <img src="view/images/cat3.jpg" alt="Thumbnail">
-                <div class="video-details">
-                    <h3>🐱 Le secret de Mats</h3>
-                    <p>Fitness-Muscu • 1,8 M de vues • il y a 11 jours</p>
-                </div>
-                <div class="video-actions">
-                    <button>Supprimer</button>
-                </div>
-            </div>
-            <div class="video-item">
-                <img src="view/images/cat3.jpg" alt="Thumbnail">
-                <div class="video-details">
-                    <h3>🐱 Le secret de Mats</h3>
-                    <p>Fitness-Muscu • 1,8 M de vues • il y a 11 jours</p>
-                </div>
-                <div class="video-actions">
-                    <button>Supprimer</button>
-                </div>
-            </div>
-
-            <!-- Add more video items as needed -->
         </div>
+     </div> -->
+     <?php foreach ($videos as $video) { ?>
+    <div class="cat-card">
+        <h2 class="cat-name"><?= htmlspecialchars($video['description']) ?></h2>
+        <img src="view/images/cat2" alt="Image de <?= htmlspecialchars($video['description']) ?>" class="cat-image">
+        <p class="cat-description">
+            <?= nl2br(htmlspecialchars($video['user_name'])) ?>
+        </p>
+        <h2 class="cat-link">
+            <a href="?page=video&id=<?= htmlspecialchars($video['id_video']) ?>">Plus d'infos sur <?= htmlspecialchars($video['description']) ?> ?</a>
+        </h2>
+        <p class="cat-timestamp">
+            Ajouté le : <?= htmlspecialchars($video['created_at']) ?>
+        </p>
+    </div>
+<?php } ?>
+
     </main>
 
     <!-- <aside>

@@ -19,14 +19,14 @@ class videoModel
 
     public function getvideobyid($id)
     {
-        $getcat = $this->bdd->prepare("SELECT * FROM video WHERE id_video = ?");
-        $getcat->execute([$id]);
-        return $getcat->fetch(PDO::FETCH_ASSOC);      
+        $getvideo = $this->bdd->prepare("SELECT * FROM video WHERE id_video = ?");
+        $getvideo->execute([$id]);
+        return $getvideo->fetch(PDO::FETCH_ASSOC);      
     }
 
-    public function addvideo($liens, $id_user)
+    public function addvideo($user_name, $liens, $description, $id_user)
     {
-        $addvideo = $this->bdd->prepare("INSERT INTO video(liens,id_user) VALUE(?,?)");
-        return $addvideo->execute([$liens,$id_user]);
+        $addvideo = $this->bdd->prepare("INSERT INTO video(user_name, liens, description, id_user) VALUE(?,?,?,?)");
+        return $addvideo->execute([$user_name, $liens, $description,$id_user]);
     }
 }

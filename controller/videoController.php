@@ -26,13 +26,11 @@ class videoController
 
             if (isset($_POST['liens'])) 
             { 
-                echo 'yess';
+
             $liens = $_POST['liens'];
-            echo $_SESSION['user']['id'];
-    
-            $this->model->addvideo($liens, $_SESSION['user']['id']);
-
-
+            $description = "message test ";
+            $this->model->addvideo($_SESSION['user']['name'], $liens, $description,  $_SESSION['user']['id']);
+            
         }
     }
 
