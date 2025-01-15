@@ -1,0 +1,72 @@
+/* Général */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000000;
+    padding: 0.5rem 1rem;
+}
+
+.container-fluid {
+    justify-content: space-between;
+}
+
+.navbar img{
+    max-width: 10rem;
+    max-height: 10rem;
+    margin-right: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    list-style: none;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-item .btn {
+    background-color: rgb(15, 15, 15);
+    color: #ffffff;
+    padding: 0.75rem 5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn img{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 5rem;
+    display: flex;
+    align-items:flex-end;
+}
+
+.navbar-nav .nav-item .btn:hover {
+    background-color: rgb(25, 25, 25);
+}
+
+/* Navbar Collapse */
+.collapse {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.collapse.show {
+    display: flex;
+    flex-direction: row;
+}
