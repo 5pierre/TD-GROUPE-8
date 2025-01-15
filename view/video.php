@@ -150,7 +150,14 @@
      <?php foreach ($videos as $video) { ?>
     <div class="cat-card">
         <h2 class="cat-name"><?= htmlspecialchars($video['title']) ?></h2>
-        <img src="view/images/cat2" alt="Image de <?= htmlspecialchars($video['description']) ?>" class="cat-image">
+        <?php 
+        if ($videoId = preg_replace('/.*v=/', '', $video['liens'])){
+       $imagesurl = "https://img.youtube.com/vi/$videoId/0.jpg";
+        }else{$imagesurl = "view/images/cat2.png";
+        }?>
+
+   
+        <img src="<?= $imagesurl ?>" alt="Image de <?= htmlspecialchars($video['description']) ?>" class="cat-image">
         <p class="cat-title">
             <?= nl2br(htmlspecialchars($video['user_name'])) ?>
         </p>
