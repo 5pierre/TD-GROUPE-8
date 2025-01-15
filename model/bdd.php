@@ -6,7 +6,7 @@ class Bdd{
     {
         try
         {
-            $bdd = new PDO("mysql:host=localhost;port=3306;dbname=rentacat","root","");
+            $bdd = new PDO("mysql:host=localhost;port=3306;dbname=cathub","root","");
             return $bdd;
             
         }

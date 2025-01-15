@@ -123,10 +123,23 @@
 <body>
     <header class="headervideo">
         <input type="text" placeholder="Rechercher">
-        <button>+ Uploader</button>
-        <div class="button-upload">
-            <button>Supprimer</button>
+
+
+ 
+        <button onclick="document.getElementById('popup').style.display='block'">+ Uploader</button>
+        <div id="popup" style="display:none;">
+            <form action="" method="post">
+                 <!-- <textarea name="liens" placeholder="liens de la video" required></textarea><br> -->
+                liens : <input type="url" name="liens" required> <br>
+
+                <button type="submit">Envoyer</button>
+            </form>
+            <button onclick="document.getElementById('popup').style.display='none'">Fermer</button>
         </div>
+
+
+
+
     </header>
 
     <main>
@@ -221,12 +234,12 @@
         </div>
     </main>
 
-    <aside>
+    <!-- <aside>
         <ul>
             <li><a href="#">Vidéos "J'aime"</a></li>
             <li><a href="#">Vos vidéos</a></li>
             <li><a href="#">Se déconnecter</a></li>
         </ul>
-    </aside>
+    </aside> -->
 </body>
 </html>

@@ -21,7 +21,9 @@ switch($page)
         break;   
 
     case 'video':
-        include_once 'view/video.php';
+        include_once 'controller/videoController.php';
+        $users = new videoController;
+        $users->gestiongestVideo();
 
         break;  
 
