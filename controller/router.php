@@ -20,6 +20,11 @@ switch($page)
         include_once 'view/contact.php';
         break;   
 
+    case 'video':
+        include_once 'view/video.php';
+
+        break;  
+
     case 'faq':
         include_once 'view/faq.php';
         break;   
