@@ -2,7 +2,7 @@
 
 
 <div class="cat-card">
-        <h2 class="cat-name"><?= htmlspecialchars($video['description']) ?></h2>
+        <h2 class="cat-name"><?= htmlspecialchars($video['title']) ?></h2>
         <img src="view/images/cat2" alt="Image de <?= htmlspecialchars($video['description']) ?>" class="cat-image">
         <p class="cat-description">
             <?= nl2br(htmlspecialchars($video['user_name'])) ?>

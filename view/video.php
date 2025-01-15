@@ -132,6 +132,8 @@
             <form action="" method="post">
                  <!-- <textarea name="liens" placeholder="liens de la video" required></textarea><br> -->
                 liens : <input type="url" name="liens" required> <br>
+                description : <input type="text" name="description" required> <br>
+                title : <input type="text" name="title" required> <br>
 
                 <button type="submit">Envoyer</button>
             </form>
@@ -144,52 +146,19 @@
     </header>
 
     <main>
-        <!-- <div class="video-list">
-            <div class="video-item">
-                <img src="view/images/cat2.jpg" alt="Thumbnail">
-                <div class="video-details">
-                    <h3>This is a story based on true events</h3>
-                    <p>Victor_movies • 2,2 M de vues • il y a 3 semaines</p>
-                </div>
-                <div class="video-actions">
-                    <button>Supprimer</button>
-                </div>
-            </div>
-
-            <div class="video-item">
-                <img src="view/images/cat1.jpg" alt="Thumbnail">
-                <div class="video-details">
-                    <h3>Pierre Chabrier vous a menti. (et bonne année)</h3>
-                    <p>Sylvain Lye • 9,3 M de vues • il y a 4 jours</p>
-                </div>
-                <div class="video-actions">
-                    <button>Supprimer</button>
-                </div>
-            </div>
-
-         
-
-            <div class="video-item">
-                <img src="view/images/cat3.jpg" alt="Thumbnail">
-                <div class="video-details">
-                    <h3>🐱 Le secret de Mats</h3>
-                    <p>Fitness-Muscu • 1,8 M de vues • il y a 11 jours</p>
-                </div>
-                <div class="video-actions">
-                    <button>Supprimer</button>
-                </div>
-            </div>
-        </div>
-     </div> -->
+ 
      <?php foreach ($videos as $video) { ?>
     <div class="cat-card">
-        <h2 class="cat-name"><?= htmlspecialchars($video['description']) ?></h2>
+        <h2 class="cat-name"><?= htmlspecialchars($video['title']) ?></h2>
         <img src="view/images/cat2" alt="Image de <?= htmlspecialchars($video['description']) ?>" class="cat-image">
-        <p class="cat-description">
+        <p class="cat-title">
             <?= nl2br(htmlspecialchars($video['user_name'])) ?>
         </p>
+        <p class="cat-description">
+            <?= nl2br(htmlspecialchars($video['description'])) ?>
+        </p>
         <h2 class="cat-link">
-            <a href="?page=video&id=<?= htmlspecialchars($video['id_video']) ?>">Plus d'infos sur <?= htmlspecialchars($video['description']) ?> ?</a>
+            <a href="?page=video&id=<?= htmlspecialchars($video['id_video']) ?>">Plus d'infos sur <?= htmlspecialchars($video['title']) ?> ?</a>
         </h2>
         <p class="cat-timestamp">
             Ajouté le : <?= htmlspecialchars($video['created_at']) ?>

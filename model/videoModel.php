@@ -24,9 +24,9 @@ class videoModel
         return $getvideo->fetch(PDO::FETCH_ASSOC);      
     }
 
-    public function addvideo($user_name, $liens, $description, $id_user)
+    public function addvideo($user_name, $liens, $description, $title, $id_user)
     {
-        $addvideo = $this->bdd->prepare("INSERT INTO video(user_name, liens, description, id_user) VALUE(?,?,?,?)");
-        return $addvideo->execute([$user_name, $liens, $description,$id_user]);
+        $addvideo = $this->bdd->prepare("INSERT INTO video(user_name, liens, description, title, id_user) VALUES(?,?,?,?,?)");
+        return $addvideo->execute([$user_name, $liens, $description, $title, $id_user]);
     }
 }

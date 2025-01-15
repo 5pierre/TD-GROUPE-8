@@ -13,7 +13,7 @@ class UsersModel
     
     public function inscription($nom,$email,$mdp) 
     {
-        $user = $this->bdd->prepare("INSERT INTO users(nom,email,mdp) VALUE(?,?,?)");
+        $user = $this->bdd->prepare("INSERT INTO users(nom,email,mdp) VALUES(?,?,?)");
         return $user->execute([$nom,$email,$mdp]);
     }
 

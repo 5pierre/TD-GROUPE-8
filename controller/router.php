@@ -23,7 +23,7 @@ switch($page)
     case 'video':
         include_once 'controller/videoController.php';
         $users = new videoController;
-        $users->gestiongestVideo();
+        $users->gestiongetVideo();
 
         break;  
 

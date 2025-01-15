@@ -2,11 +2,18 @@
 
 class Bdd{
 
+    // private static $host ='localhost';
+    // private static $port ='5432';
+    // private static $dbname ='cathub';
+    // private static $user ='postgres';
+    // private static $password ='8029';
+
+
     public static function connexion()
     {
         try
         {
-            $bdd = new PDO("mysql:host=localhost;port=3306;dbname=cathub","root","");
+            $bdd = new PDO("pgsql:host=localhost;port=5432;dbname=cathub","postgres","8029");
             return $bdd;
             
         }
@@ -15,5 +22,25 @@ class Bdd{
             echo $e;
         }
     }
-
 }
+
+
+
+
+
+// class Bdd{
+
+//     public static function connexion()
+//     {
+//         try
+//         {
+//             $bdd = new PDO("mysql:host=localhost;port=3306;dbname=cathub","root","");
+//             return $bdd;
+            
+//         }
+//         catch(Exception $e)
+//         {
+//             echo $e;
+//         }
+//     }
+// }

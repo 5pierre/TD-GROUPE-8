@@ -2,6 +2,7 @@
 include_once 'model/videoModel.php';
 
 
+
 class videoController
 {
     private $model;
@@ -10,7 +11,7 @@ class videoController
     {
         $this->model = new videoModel;
     }
-    public function gestiongestVideo()
+    public function gestiongetVideo()
     {
 
 
@@ -28,8 +29,12 @@ class videoController
             { 
 
             $liens = $_POST['liens'];
-            $description = "message test ";
-            $this->model->addvideo($_SESSION['user']['name'], $liens, $description,  $_SESSION['user']['id']);
+            $description = $_POST['description'];
+            $title = $_POST['title'];
+            // a definire /!\
+            // $description = "message test ";
+            // $title = "titre a def";
+            $this->model->addvideo($_SESSION['user']['name'], $liens, $description, $title,  $_SESSION['user']['id']);
             
         }
     }
@@ -37,9 +42,6 @@ class videoController
     }
 
 }
-
-
-
 
 
 
