@@ -14,9 +14,7 @@
           <img src="view/images/Cathublogo.png" alt="logo cat hub">
         </a>
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="btn" href="?page=acceuil">Accueil</a>
-          </li>
+  
           <li class="nav-item">
             <a class="btn" href="?page=contact">Contact</a>
           </li>
@@ -32,11 +30,8 @@
             <img src="view/images/icon.jpg" alt="">
           </a>
           <div class="dropdown">
-            <a href="?page=login">Inscription</a>
             <a href="?page=login">Connexion</a>
             <a href="?page=deconnexion">Logout</a> 
-            <a href="?page=myvideo">mes video</a>
-            <a href="?page=help">Help</a>
           </div>
         </div>
       </div>
