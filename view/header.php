@@ -34,7 +34,7 @@
           <div class="dropdown">
             <a href="?page=login">Inscription</a>
             <a href="?page=login">Connexion</a>
-            <a href="?page=logout">Logout</a>
+            <a href="?page=deconnexion">Logout</a> 
             <a href="?page=myvideo">mes video</a>
             <a href="?page=help">Help</a>
           </div>

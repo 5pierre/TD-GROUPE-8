@@ -36,6 +36,10 @@ switch($page)
         include_once 'view/faq.php';
         break;   
 
+    case 'deconnexion':
+        include_once 'view/deconnexion.php';
+        break; 
+
     default :
     include 'view/404.php';
 }
