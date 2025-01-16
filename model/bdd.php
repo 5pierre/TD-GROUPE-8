@@ -13,7 +13,7 @@ class Bdd{
     {
         try
         {
-            $bdd = new PDO("pgsql:host=localhost;port=5432;dbname=cathub","postgres","8029");
+            $bdd = new PDO("pgsql:host=localhost;port=5432;dbname=Cathub","postgres","0123456789");
             return $bdd;
             
         }
