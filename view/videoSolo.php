@@ -7,23 +7,27 @@
     <?php 
         $videoUrl = htmlspecialchars($video['liens']);
         
-        // Vérifie si le lien est une vidéo YouTube
-        if (strpos($videoUrl, 'youtube.com') !== false || strpos($videoUrl, 'youtu.be') !== false) {
+        // Vérifie si le lien est une vidéo YouTube 
+        if (strpos($videoUrl, 'youtube.com') !== false || strpos($videoUrl, 'youtu.be') !== false || strpos($videoUrl, 'dailymotion.com') !== false)  {
             // Convertit les liens en URL d'intégration YouTube
-            $embedUrl = preg_replace(
-                '/(youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]+)/',
-                'https://www.youtube.com/embed/$2',
-                $videoUrl
-            );
-            echo '<iframe width="560" height="315" src="' . $embedUrl . '" frameborder="0" allowfullscreen></iframe>';
+            // $embedUrl = preg_replace(
+            //     '/(youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]+)/',
+            //     'https://www.youtube.com/embed/$2',
+            //     $videoUrl
+            // );
+            echo '<iframe width="560" height="315" src="' . $videoUrl . '" frameborder="0" allowfullscreen></iframe>';
         } else {
-            // Affiche la vidéo pour les liens Firebase ou autres formats MP4
             echo '<video width="560" height="315" controls>
                     <source src="' . $videoUrl . '" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture vidéo.
                   </video>';
         }
         ?>
+
+<!-- https://www.dailymotion.com/embed/video/x9ceui0 -->
+<!-- <iframe src="https://www.dailymotion.com/embed/video/x9ceui0" allowfullscreen allow="autoplay; fullscreen"></iframe> -->
+
+
 
     <!-- <video 
     width="560" 
@@ -33,9 +37,6 @@
     Votre navigateur ne supporte pas la lecture de vidéos.
     </video> -->
 
-    <?php $videoId = preg_replace('/.*v=/', '', $video['liens']);
-$thumbnailUrl = "https://img.youtube.com/vi/$videoId/0.jpg";?>
-    <img src="<?= $thumbnailUrl ?>" alt="Miniature de la vidéo" width="560" height="315">
 
 
     <p class="cat-description">

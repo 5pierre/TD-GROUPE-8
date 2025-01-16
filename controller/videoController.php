@@ -36,6 +36,8 @@ class videoController
             // $title = "titre a def";
             $this->model->addvideo($_SESSION['user']['name'], $liens, $description, $title,  $_SESSION['user']['id']);
             
+            // header("Location: ?page=video");
+
         }
     }
 
