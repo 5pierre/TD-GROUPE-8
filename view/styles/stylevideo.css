@@ -6,6 +6,28 @@ body {
     color: #333;
 }
 
+/*Style Mini header*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*Style Video*/
+
 .cat-card {
     background-color: white;
     margin: 20px auto;
