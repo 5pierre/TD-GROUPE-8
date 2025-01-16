@@ -55,8 +55,8 @@ class usersController
 
             if ($user && password_verify($password, $user['mdp'])) 
             {
-
-                $_SESSION['user']['id'] = $user['id'];
+                
+                $_SESSION['user']['id'] = $user['id_user'];
                 $_SESSION['user']['name'] = $user['nom']; 
                 $_SESSION['user']['logged_in'] = true;
 

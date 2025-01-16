@@ -24,8 +24,13 @@ switch($page)
         include_once 'controller/videoController.php';
         $users = new videoController;
         $users->gestiongetVideo();
-
         break;  
+
+    case 'myvideo':
+        include_once 'controller/myvideoController.php';
+        $users = new myvideoController;
+        $users->gestiongetMyvideo();
+    break;  
 
     case 'faq':
         include_once 'view/faq.php';
