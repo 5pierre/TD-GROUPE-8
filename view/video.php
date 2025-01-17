@@ -71,31 +71,5 @@
     </div>
 <?php } ?>
     </main>
-    <!--
-    <header>
-        <input type="text" placeholder="Rechercher">
-
-        <button onclick="document.getElementById('popup').style.display='block'">+ Uploader</button>
-        <div id="popup" style="display:none;">
-            <form action="" method="post">
-                 <textarea name="liens" placeholder="liens de la video" required></textarea><br>
-                liens : <input type="url" name="liens" required> <br>
-                description : <input type="text" name="description" required> <br>
-                title : <input type="text" name="title" required> <br>
-
-                <button type="submit">Envoyer</button>
-            </form>
-            <button onclick="document.getElementById('popup').style.display='none'">Fermer</button>
-        </div>
-    </header>
-    -->
-
-    <!-- <aside>
-        <ul>
-            <li><a href="#">Vidéos "J'aime"</a></li>
-            <li><a href="#">Vos vidéos</a></li>
-            <li><a href="#">Se déconnecter</a></li>
-        </ul>
-    </aside> -->
 </body>
 </html>

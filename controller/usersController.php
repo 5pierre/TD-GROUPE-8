@@ -14,7 +14,6 @@ class usersController
     public function getFromInscription()
     {
         include_once 'view/loginPage.php';
-
     }
 
     public function gestionRequest()
@@ -73,7 +72,6 @@ class usersController
         {
         $this->getFromInscription();
         }
-
     }
 
 
@@ -90,22 +88,16 @@ class usersController
             {
                 echo "inscriptio ok";
                 header("Location: ?page=login");
-
             }
             else
             {
                 echo "erreur d'inscription";
                 $this->getFromInscription();
             }
-
         }
         else{
             $this->getFromInscription();
         }
-
     }
-
-
-
 }
 

@@ -14,7 +14,7 @@
         </div>
         <div class="containerrow">
             <div class="leftcontainer">
-                <img src="view/images/cat1.jpg" class="cat3">
+                <img src="view/images/frog.png" class="cat3">
                 <img src="view/images/cat2.jpg" class="cat3">
                 <img src="view/images/mx.jpg" class="cat3">
                 <img src="view/images/w.jpg" class="cat3">

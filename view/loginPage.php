@@ -38,7 +38,6 @@
         </div>
     </div>
     </div>
-    <!-- Le message d'erreur ne fonctionne pas -->
     <h1 id="errorMessage" style="color: white; display: none;"></h1>
 
     <script>
@@ -49,41 +48,8 @@
     registerBtn.addEventListener('click', () => {
         container.classList.add("active");
     });
-    /*
-    loginBtn.addEventListener('click', () => {
-        container.classList.remove("active");
-    });
-
-    document.getElementById('inscriptionform').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const mdp = document.getElementById('mdp').value;
-
-            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{12,}$/;
-
-            if (!regex.test(mdp)) {
-                const errorMessage = document.getElementById('errorMessage');
-                errorMessage.textContent = "Erreur : Mot de passe non conforme. Assurez-vous qu'il contient :\n" +
-                    " - Au moins une lettre minuscule\n" +
-                    " - Au moins une lettre majuscule\n" +
-                    " - Au moins un chiffre\n" +
-                    " - Au moins un caractère spécial\n" +
-                    " - Une longueur minimale de 12 caractères.";
-                errorMessage.style.display = "block";
-            } else {
-                this.submit();
-            }
-    });*/
+   
     </script>
 </body>
 
 </html>
-
-<!-- Potentiellement utile
-<div class="social-icons">
-    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-</div> 
--->

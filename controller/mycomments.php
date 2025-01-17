@@ -11,8 +11,6 @@ class mycommentsController
     {
         $this->model = new videoModel;
     }
-
-
     public function gestioncomments()
     {
 
@@ -25,27 +23,15 @@ class mycommentsController
             { 
                 $comid = $_POST['comid'];
                 $this->model->suppcom($comid);
-                // header("Location: ?page=mycomments");
                 exit;
-
             }
-            
         }
         else 
         {
             include_once 'view/usernonlogee.php';
-
         }
 
     }
-
-
-
-
-
-
-
-
 
 }
 
