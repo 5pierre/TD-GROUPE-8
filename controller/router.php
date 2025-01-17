@@ -44,6 +44,11 @@ switch($page)
         include_once 'view/help.php';
         break;
 
+    case 'mycomments':
+        include_once 'view/mycomments.php';
+        break;
+        
+
     default :
     include 'view/404.php';
 }
