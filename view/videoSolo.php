@@ -54,5 +54,21 @@
         <p class="Commentaire">
         </p>
     </div>
+
+    <div class="comments-section">
+            <h3>Commentaires :</h3>
+            <?php foreach ($comments as $comment) { ?>
+                <div class="comment">
+                    <p class="comment-user"><?= htmlspecialchars($comment['user_name']) ?> a écrit :</p>
+                    <p class="comment-text"><?= nl2br(htmlspecialchars($comment['contenue'])) ?></p>
+                </div>
+            <?php } ?>
+
+            <form action="" method="post" class="popup-form">
+                <label for="comment">Ajouter un commentaire :</label>
+                <textarea id="comment" name="commentaire" rows="3" placeholder="Écrivez votre commentaire..." required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
 </div>
 

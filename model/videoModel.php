@@ -41,4 +41,43 @@ class videoModel
         $addvideo = $this->bdd->prepare("INSERT INTO video(user_name, liens, description, title, id_user) VALUES(?,?,?,?,?)");
         return $addvideo->execute([$user_name, $liens, $description, $title, $id_user]);
     }
+
+
+
+//comentaire
+
+public function getcommentaire()
+{
+    return $this->bdd->query("SELECT * FROM comms")->fetchAll(PDO::FETCH_ASSOC);
+}
+
+public function suppcommentaire($idcommentaire)
+{        
+    $suppcommentaire = $this->bdd->prepare("DELETE FROM comms WHERE id_comm = ?");
+    return $suppcommentaire->execute([$idcommentaire]);
+}
+
+
+public function getcommentaireid($id)
+{
+    $getcommentaire = $this->bdd->prepare("SELECT * FROM comms WHERE id_comm = ?");
+    $getcommentaire->execute([$id]);
+    return $getcommentaire->fetch(PDO::FETCH_ASSOC);      
+}
+
+public function addcommentaire($contenue,$user_name, $id_user, $id_video)
+{
+    $addvideo = $this->bdd->prepare("INSERT INTO comms(contenue, user_name, id_user, id_video) VALUES(?,?,?,?)");
+    return $addvideo->execute([$contenue,$user_name, $id_user, $id_video]);
+}
+
+
+public function getcommentsbyvideo($id)
+{
+    $getcommentsbyvideo = $this->bdd->prepare("SELECT * FROM comms WHERE id_video = ?");
+    $getcommentsbyvideo->execute([$id]);
+    return $getcommentsbyvideo->fetchAll();      
+}
+
+
 }
