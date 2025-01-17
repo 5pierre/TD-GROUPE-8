@@ -39,6 +39,10 @@ switch($page)
     case 'deconnexion':
         include_once 'view/deconnexion.php';
         break; 
+    
+    case 'help':
+        include_once 'view/help.php';
+        break;
 
     default :
     include 'view/404.php';
