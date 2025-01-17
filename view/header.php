@@ -14,9 +14,7 @@
           <img src="view/images/Cathublogo.png" alt="logo cat hub">
         </a>
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="btn" href="?page=acceuil">Accueil</a>
-          </li>
+  
           <li class="nav-item">
             <a class="btn" href="?page=contact">Contact</a>
           </li>
