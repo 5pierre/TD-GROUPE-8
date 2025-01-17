@@ -8,120 +8,17 @@ body {
 
 main {
     background-color: rgb(241, 244, 246);
-    background: linear-gradient(to right, #000000, #353535);
+    background: linear-gradient(to bottom, #000000, #353535);
     padding-top: 1rem;
-}
-
-/*Style Mini header*/
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #000000;
-    background: linear-gradient(to right, #000000, #353535);
-}
-
-.search-input {
-    flex: 1;
-    max-width: 300px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    font-size: 14px;
-}
-
-.upload-button {
-    padding: 10px 20px;
-    margin-left: 10px;
-    background-color: rgb(15, 15, 15);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.upload-button:hover {
-    background-color: rgb(25, 25, 25);
-}
-/*Le Problème est ici*/
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0.1, 0.1, 0.1, 0.1);
-    z-index: 1000;
-}
-
-.popup-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.popup-input {
-    width: 90%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.buttoncontainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.submit-button {
-    padding: 10px;
-    background-color: rgb(15, 15, 15);
-    box-shadow: 0 4px 6px rgba(0.1, 0.1, 0.1, 0.1);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    width: 25%;
-    transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-    background-color: rgb(55, 55, 55);
-}
-
-.close-button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: rgb(15, 15, 15);
-    box-shadow: 0 4px 6px rgba(0.1, 0.1, 0.1, 0.1);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    width: 25%;
-    transition: background-color 0.3s ease;
-}
-
-.close-button:hover {
-    background-color: rgb(55, 55, 55);
+    height: 100vh;
 }
 
 /*Style Video*/
 .cat-card {
     display: flex;
     flex-direction: column;
-    background-color: rgb(244, 247, 249);
+    position: relative;
+    background-color: rgb(25, 25, 25);
     opacity: 80%;    
     margin: 20px auto;
     padding: 40px;
@@ -129,7 +26,6 @@ main {
     min-height: 300px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0.2, 0.6);
-    position: relative;
 }
 
 .cat-content {
@@ -148,7 +44,6 @@ main {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0.2, .6);
-    margin-bottom: 50px;
 }
 
 .cat-name {
@@ -160,17 +55,53 @@ main {
 
 .cat-link {
     text-decoration: none;
-    color: #ff6b6b;
+    color: #f56715;
     font-size: 2em;
     margin-bottom: 10px;
     display: inline-block;
 }
 
 .cat-link:hover {
-    color: #ff4b4b;
+    color: #f56f15;
 }
 
 .cat-description {
     font-size: 1em;
+    color: #ffffff;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: rgb(15, 15, 15);
+    color: #f56f15;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+
+.supp-form {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+}
+
+.supp {
+    padding: 10px 20px;
+    background-color: rgb(15, 15, 15);
+    color: #f56f15;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.supp:hover {
+    background-color: #f56f15;
     color: #ffffff;
 }

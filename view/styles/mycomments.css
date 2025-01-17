@@ -2,53 +2,82 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
     color: #333;
 }
 
+main {
+    background-color: rgb(241, 244, 246);
+    background: linear-gradient(to bottom, #000000, #353535);
+    padding-top: 1rem;
+    height: 100vh;
+}
+
 .cat-card {
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgb(25, 25, 25);
+    opacity: 80%;    
     margin: 20px auto;
-    padding: 20px;
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 40px;
+    max-width: 30%;
+    min-height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0.2, 0.6);
+}
+
+.cat-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: -350px;
+    margin-left: 35%;
+    z-index: 2;
 }
 
 .cat-name {
-    font-size: 1.8em;
-    color: #444;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #f56715;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .cat-description {
     font-size: 1em;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.cat-link a {
-    text-decoration: none;
-    color: #ff6b6b;
-    font-size: 1.2em;
-}
-
-.cat-link a:hover {
-    color: #ff4b4b;
-    text-decoration: underline;
+    color: #ffffff;
 }
 
 button {
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: rgb(15, 15, 15);
+    color: #f56f15;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #ff4b4b;
+
+.supp-form {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+}
+
+.supp {
+    padding: 10px 20px;
+    background-color: rgb(15, 15, 15);
+    color: #f56f15;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.supp:hover {
+    background-color: #f56f15;
+    color: #ffffff;
 }

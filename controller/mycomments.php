@@ -16,7 +16,7 @@ class mycommentsController
     public function gestioncomments()
     {
 
-        if (!$_SESSION['admin']['logged_in_admin'] === false) {
+        if (!$_SESSION['user']['logged_in'] === false) {
 
             $coms = $this->model->getcommentairebyid_user($_SESSION['user']['id']);
             include_once 'view/mycomments.php';
@@ -25,7 +25,7 @@ class mycommentsController
             { 
                 $comid = $_POST['comid'];
                 $this->model->suppcom($comid);
-                header("Location: ?page=mycomments");
+                // header("Location: ?page=mycomments");
                 exit;
 
             }
