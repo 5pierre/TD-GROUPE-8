@@ -45,7 +45,9 @@ switch($page)
         break;
 
     case 'mycomments':
-        include_once 'view/mycomments.php';
+        include_once 'controller/mycomments.php';
+        $comments = new mycommentsController;
+        $comments->gestioncomments();
         break;
         
 

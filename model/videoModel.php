@@ -51,10 +51,10 @@ public function getcommentaire()
     return $this->bdd->query("SELECT * FROM comms")->fetchAll(PDO::FETCH_ASSOC);
 }
 
-public function suppcommentaire($idcommentaire)
+public function suppcom($idcom)
 {        
-    $suppcommentaire = $this->bdd->prepare("DELETE FROM comms WHERE id_comm = ?");
-    return $suppcommentaire->execute([$idcommentaire]);
+    $suppcom = $this->bdd->prepare("DELETE FROM comms WHERE id_comm = ?");
+    return $suppcom->execute([$idcom]);
 }
 
 
@@ -79,5 +79,10 @@ public function getcommentsbyvideo($id)
     return $getcommentsbyvideo->fetchAll();      
 }
 
-
+public function getcommentairebyid_user($id)
+{
+    $getcommentaire = $this->bdd->prepare("SELECT * FROM comms WHERE id_user = ?");
+    $getcommentaire->execute([$id]);
+    return $getcommentaire->fetchAll();      
+}
 }
