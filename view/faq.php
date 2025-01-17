@@ -3,7 +3,7 @@
 
 <body>
 <header x-data="{ showPopup: false }" class="header">
-        <input type="text" placeholder="Rechercher" class="search-input">
+        <!-- <input type="text" placeholder="Rechercher" class="search-input"> -->
     
         <button @click="showPopup = ! showPopup" class="upload-button">
         + Uploder
@@ -27,11 +27,11 @@
             </form>
         </div>
     </header>
-    <div x-data="{ open: false }">
+    <!-- <div x-data="{ open: false }">
         <button @click="open = ! open">Toggle</button>
  
         <div x-show="open" @click.outside="open = false">Contents...</div>
-    </div>
+    </div> -->
     <main id="faq-page">
         <!-- <h1>Questions Fréquemment Posées</h1>
         <section class="faq-section">

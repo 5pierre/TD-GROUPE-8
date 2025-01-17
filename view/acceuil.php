@@ -14,13 +14,8 @@
         </div>
         <div class="containerrow">
             <div class="leftcontainer">
-                <h2>Nos vidéos populaires :</h2>
-                <?php 
-                foreach ($videos as $video)
-                    if ($videoId = preg_replace('/.*v=/', '', $video['liens'])){
-                        $imagesurl = "https://img.youtube.com/vi/$videoId/0.jpg";
-                    }else{$imagesurl = "view/images/cat2.png";
-                }?>
+            <img src="view/images/cat1.jpg" class="cat4">
+
             </div>
             <div class="rightcontainer">
                 <div class="containimg">
