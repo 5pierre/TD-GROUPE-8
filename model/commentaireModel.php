@@ -18,7 +18,7 @@ class commentaireModel
 
     public function suppcommentaire($idcommentaire)
     {        
-        $suppcommentaire = $this->bdd->prepare("DELETE FROM video WHERE id_commentaire = ?");
+        $suppcommentaire = $this->bdd->prepare("DELETE FROM video WHERE id_comm = ?");
         return $suppcommentaire->execute([$idcommentaire]);
     }
 
