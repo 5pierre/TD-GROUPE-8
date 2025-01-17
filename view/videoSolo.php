@@ -1,52 +1,58 @@
-<link rel="stylesheet" href="./view/styles/stylevideosolo.css">
+<link rel="stylesheet" href="view/styles/stylevideosolo.css">
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<header x-data="{ showPopup: false }" class="header">
+        <!--<input type="text" placeholder="Rechercher" class="search-input">-->
+    
+        <button @click="showPopup = ! showPopup" class="upload-button">
+        + Commenter
+        </button>
+
+        <div x-show="showPopup" @click.outside="showPopup = false" class="popup">
+            <form action="" method="post" class="popup-form">
+                <label>
+                    Ajouter un commentaire :
+                    <input type="texte" name="commentaire" required class="popup-input">
+                </label>
+                <button type="submit" class="submit-button">
+                    Envoyer
+                </button>
+            </form>
+            <button @click="showPopup = false" class="close-button">
+                Fermer
+            </button>
+        </div>
+    </header>
 
 <div class="cat-card">
-    <h2 class="cat-name"><?= htmlspecialchars($video['title']) ?></h2>
-    <!-- Affichage de la vidéo -->
-
-    <?php 
-        $videoUrl = htmlspecialchars($video['liens']);
+    <div class="cat-image">
+        <?php 
+            $videoUrl = htmlspecialchars($video['liens']);
         
-        // Vérifie si le lien est une vidéo YouTube 
-        if (strpos($videoUrl, 'youtube.com') !== false || strpos($videoUrl, 'youtu.be') !== false || strpos($videoUrl, 'dailymotion.com') !== false)  {
-            // Convertit les liens en URL d'intégration YouTube
-            // $embedUrl = preg_replace(
-            //     '/(youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]+)/',
-            //     'https://www.youtube.com/embed/$2',
-            //     $videoUrl
-            // );
-            echo '<iframe width="560" height="315" src="' . $videoUrl . '" frameborder="0" allowfullscreen></iframe>';
-        } else {
-            echo '<video width="560" height="315" controls>
+            // Vérifie si le lien est une vidéo YouTube 
+            if (strpos($videoUrl, 'youtube.com') !== false || strpos($videoUrl, 'youtu.be') !== false || strpos($videoUrl, 'dailymotion.com') !== false)  {
+                echo '<iframe width="666" height="333" src="' . $videoUrl . '" frameborder="0" allowfullscreen></iframe>';
+            } else {
+                echo '<video width="666" height="333" controls>
                     <source src="' . $videoUrl . '" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture vidéo.
                   </video>';
-        }
+            }
         ?>
-
-<!-- https://www.dailymotion.com/embed/video/x9ceui0 -->
-<!-- <iframe src="https://www.dailymotion.com/embed/video/x9ceui0" allowfullscreen allow="autoplay; fullscreen"></iframe> -->
-
-
-
-    <!-- <video 
-    width="560" 
-    height="315" 
-    controls>
-    <source src="https://cdn.discordapp.com/attachments/591380645050318868/1241065004057235537/annonce.mp4?ex=678933da&is=6787e25a&hm=b6e205c5ce72fd8220c23d3319a993e342adc9051bbe452a89f1432326d44a9f&" type="video/mp4">
-    Votre navigateur ne supporte pas la lecture de vidéos.
-    </video> -->
-
-
-
-    <p class="cat-description">
-        <?= nl2br(htmlspecialchars($video['user_name'])) ?>
-    </p>
-    <p class="cat-description">
-        <?= nl2br(htmlspecialchars($video['description'])) ?>
-    </p>
-    <p class="cat-timestamp">
-        Ajouté le : <?= htmlspecialchars($video['created_at']) ?>
-    </p>
+    </div>
+    <div class="cat-content">
+        <h2 class="cat-link">
+            <?= htmlspecialchars($video['title']) ?>
+        </h2>
+        <p class="cat-name">
+            Chaîne : <?= htmlspecialchars($video['user_name']) ?> Date : <?= htmlspecialchars($video['created_at']) ?>
+        </p>
+        <p class="cat-description">
+            <?= nl2br(htmlspecialchars($video['description'])) ?>
+        </p>
+        <!--Modifie le code ici afin d'ajouter la logique de la classe commentaire-->
+        <p class="Commentaire">
+        </p>
+    </div>
 </div>
 

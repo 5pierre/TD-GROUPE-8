@@ -4,7 +4,7 @@
     <div class="bc">
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="" method="post">
+            <form action="" method="post" id="connexionform">
                 <h1>Connexion</h1>
                 <input type="hidden" name="action" value="connexion">
                 Email : <input type="email" name="email" required> <br>
@@ -13,7 +13,7 @@
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="" method="post">
+            <form action="" method="post" id="inscriptionform">
                 <h1>Inscription</h1>
                 <input type="hidden" name="action" value="inscription">
                 Email : <input type="email" name="email" required> <br>
@@ -38,6 +38,8 @@
         </div>
     </div>
     </div>
+    <!-- Le message d'erreur ne fonctionne pas -->
+    <h1 id="errorMessage" style="color: white; display: none;"></h1>
 
     <script>
     const container = document.getElementById('container');
@@ -50,6 +52,27 @@
 
     loginBtn.addEventListener('click', () => {
         container.classList.remove("active");
+    });
+
+    document.getElementById('inscriptionform').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const mdp = document.getElementById('mdp').value;
+
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{12,}$/;
+
+            if (!regex.test(mdp)) {
+                const errorMessage = document.getElementById('errorMessage');
+                errorMessage.textContent = "Erreur : Mot de passe non conforme. Assurez-vous qu'il contient :\n" +
+                    " - Au moins une lettre minuscule\n" +
+                    " - Au moins une lettre majuscule\n" +
+                    " - Au moins un chiffre\n" +
+                    " - Au moins un caractère spécial\n" +
+                    " - Une longueur minimale de 12 caractères.";
+                errorMessage.style.display = "block";
+            } else {
+                this.submit();
+            }
     });
     </script>
 </body>

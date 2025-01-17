@@ -36,7 +36,7 @@ main {
     padding: 10px 20px;
     margin-left: 10px;
     background-color: rgb(15, 15, 15);
-    color: white;
+    color: #f56f15;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -151,14 +151,14 @@ main {
 
 .cat-link {
     text-decoration: none;
-    color: #ff6b6b;
+    color: #f56715;
     font-size: 2em;
     margin-bottom: 10px;
     display: inline-block;
 }
 
 .cat-link:hover {
-    color: #ff4b4b;
+    color: #f56f15;
 }
 
 .cat-description {

@@ -1,65 +1,65 @@
+body {
+    background: linear-gradient(to bottom, #000000, #353535);
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif; 
+}
 
-#home-page {
-    font-family: 'Arial', sans-serif;
-    background-color: #fdf6e3;
-    color: #333;
-    max-width: 800px;
-    margin: 50px auto;
+h1, h2 {
+    color: #f56f15;
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-#home-page h1 {
-    font-size: 2.5rem;
-    color: #ff6f61;
-    margin-bottom: 20px;
+.containerrow {
+    display: flex;
+    width: 100%; 
+    justify-content: space-between;
 }
 
-#home-page h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-#home-page p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-#home-page ul, 
-#home-page ol {
+.leftcontainer {
+    width: 45%;
+    padding: 20px;
     text-align: left;
-    margin: 20px auto;
-    padding: 0;
-    list-style-position: inside;
+    margin-left: 25px;
 }
 
-#home-page ul li, 
-#home-page ol li {
-    margin: 10px 0;
-    font-size: 1rem;
+.rightcontainer {
+    width: 45%;
+    padding: 20px;
+    text-align: left;
+    margin-right: 25px;
 }
 
-#home-page .cta {
-    margin-top: 30px;
+.containimg {
+    position: relative;
+    max-width: 500px;
+    max-height: 400px;
 }
 
-#home-page .cta-button {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #ff6f61;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.cat4 {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 400px;
+    display: block;
+    border-radius: 25px;
 }
 
-#home-page .cta-button:hover {
-    background-color: #e65a50;
+.xcat {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 100px;
+    opacity: 0.6;
 }
