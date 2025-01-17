@@ -64,6 +64,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .popup-input {
@@ -71,6 +73,13 @@ main {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.buttoncontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 .submit-button {

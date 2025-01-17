@@ -24,7 +24,7 @@
             </div>
             <div class="rightcontainer">
                 <div class="containimg">
-                    <img src="view/images/Cat4.jpg" class="cat4">
+                    <img src="view/images/p.png" class="cat4">
                     <img src="view/images/XCat.png" class="xcat">
                 </div>
             </div>

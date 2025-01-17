@@ -19,23 +19,25 @@
             <form action="" method="post" class="popup-form">
                 <label>
                     Liens :
-                    <input type="url" name="liens" required class="popup-input">
+                    <input type="url" name="liens" required class="popup-input" placeholder="Metter ici le lien de votre video">
                 </label>
                 <label>
                     Description :
-                    <input type="text" name="description" required class="popup-input">
+                    <input type="text" name="description" required class="popup-input" placeholder="Écrivez nous une petite description ">
                 </label>
                 <label>
                     Title :
-                    <input type="text" name="title" required class="popup-input">
+                    <input type="text" name="title" required class="popup-input" placeholder="Choisissez un bon titre">
                 </label>
-                <button type="submit" class="submit-button">
-                    Envoyer
-                </button>
+                <div class="buttoncontainer">
+                    <button type="submit" class="submit-button">
+                        Envoyer
+                    </button>
+                    <button @click="showPopup = false" class="close-button">
+                        Fermer
+                    </button>
+                </div>
             </form>
-            <button @click="showPopup = false" class="close-button">
-                Fermer
-            </button>
         </div>
     </header>
 

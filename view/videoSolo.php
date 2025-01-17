@@ -1,29 +1,6 @@
 <link rel="stylesheet" href="view/styles/stylevideosolo.css">
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-<header x-data="{ showPopup: false }" class="header">
-        <!--<input type="text" placeholder="Rechercher" class="search-input">-->
-    
-        <button @click="showPopup = ! showPopup" class="upload-button">
-        + Commenter
-        </button>
-
-        <div x-show="showPopup" @click.outside="showPopup = false" class="popup">
-            <form action="" method="post" class="popup-form">
-                <label>
-                    Ajouter un commentaire :
-                    <input type="texte" name="commentaire" required class="popup-input">
-                </label>
-                <button type="submit" class="submit-button">
-                    Envoyer
-                </button>
-            </form>
-            <button @click="showPopup = false" class="close-button">
-                Fermer
-            </button>
-        </div>
-    </header>
-
 <div class="cat-card">
     <div class="cat-image">
         <?php 
@@ -50,16 +27,11 @@
         <p class="cat-description">
             <?= nl2br(htmlspecialchars($video['description'])) ?>
         </p>
-        <!--Modifie le code ici afin d'ajouter la logique de la classe commentaire-->
-        <p class="Commentaire">
-        </p>
-    </div>
-
-    <div class="comments-section">
+        <div class="comments-section">
             <h3>Commentaires :</h3>
             <?php foreach ($comments as $comment) { ?>
                 <div class="comment">
-                    <p class="comment-user"><?= htmlspecialchars($comment['user_name']) ?> a écrit :</p>
+                    <p class="comment-user"><?= htmlspecialchars($comment['user_name']) ?> :</p>
                     <p class="comment-text"><?= nl2br(htmlspecialchars($comment['contenue'])) ?></p>
                 </div>
             <?php } ?>
@@ -70,5 +42,5 @@
                 <button type="submit">Envoyer</button>
             </form>
         </div>
+    </div>
 </div>
-

@@ -55,12 +55,13 @@ h1, h2 {
 
 .xcat {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    right: 0;
+    transform: none;
     width: auto;
     height: auto;
     max-width: 200px;
     max-height: 100px;
     opacity: 0.6;
+    border-radius: 0 0 25px;
 }

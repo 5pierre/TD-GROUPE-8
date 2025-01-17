@@ -131,44 +131,50 @@ body{
     color: #ffffff;
 }
 
+/*Commentaire*/
 
 .comments-section {
     margin-top: 30px;
     padding: 20px;
-    background-color: #fafafa;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    opacity: 80%;
+
 }
 
 .comments-section h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: #444;
+    color: #f56715;
 }
 
 .comment {
     margin-bottom: 15px;
     padding: 10px;
-    background-color: white;
+    background-color: #353535;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 90%;
 }
 
 .comment-user {
     font-weight: bold;
+    font-size: 1.5em;
+    color: #f56715;
     margin-bottom: 5px;
 }
 
 .comment-text {
     font-size: 1em;
-    color: #555;
+    color: #ffffff;
 }
 
 .popup-form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
 }
 
 .popup-form input, .popup-form textarea {
@@ -182,14 +188,16 @@ body{
 
 .popup-form button {
     padding: 10px 15px;
-    background-color: #ff6b6b;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
+    max-width: 100px;
+    box-shadow: 0 0px 40px 5px rgba(255, 255, 255, 0.15);
 }
 
 .popup-form button:hover {
-    background-color: #ff4b4b;
+    background-color: #232323;
 }
