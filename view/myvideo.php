@@ -23,10 +23,6 @@
             </h2>
             <p class="cat-name">
                 Chaîne : <?= htmlspecialchars($video['user_name']) ?> Date : <?= htmlspecialchars($video['created_at']) ?>
-                <div x-data="{ count: 0 }">
-                    <button x-on:click="count++">Vues</button>
-                    <span x-text="count"></span>
-                </div>
             </p>
             <p class="cat-description">
                 <?= nl2br(htmlspecialchars($video['description'])) ?>
